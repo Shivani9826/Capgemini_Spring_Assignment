@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="co.springass2c.Question" name="ques">
+
+		<property name="questionId">
+			<value>1</value>
+		</property>
+
+		<property name="question">
+			<value>What is the capital of Madhya Pradesh?</value>
+		</property>
+
+		<property name="answers">
+			<map>
+				<entry key="1" value="Bhopal" />
+				<entry key="2" value="Indore" />
+				<entry key="3" value="Sehore" />
+				<entry key="4" value="Sanchi" />
+			</map>
+		</property>
+
+
+	</bean>
+</beans>
