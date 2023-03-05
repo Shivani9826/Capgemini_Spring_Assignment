@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="https://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+ ">
+
+	<bean class="co.springass1.Customer" name="customer"
+		autowire="byName">
+
+		<property name="customerId">
+			<value>101</value>
+		</property>
+
+		<property name="customerName">
+			<value>Manav</value>
+		</property>
+
+		<property name="customerContact">
+			<value>95878493</value>
+		</property>
+
+	</bean>
+
+	<bean class="co.springass1.Address" name="customerAddress">
+		<property name="street">
+			<value>Cooper place</value>
+		</property>
+
+		<property name="city">
+			<value>New York</value>
+		</property>
+
+		<property name="country">
+			<value>USA</value>
+		</property>
+
+		<property name="state">
+			<value>abc</value>
+		</property>
+
+		<property name="zip">
+			<value>48958</value>
+		</property>
+	</bean>
+
+	<bean name="address1" class="co.springass1.Address">
+		<constructor-arg value="Mp nagar" />
+		<constructor-arg value="Bhopal" />
+		<constructor-arg value="Madhya pradesh" />
+		<constructor-arg value="36223" />
+		<constructor-arg value="India" />
+
+	</bean>
+
+	<bean name="customer1" class="co.springass1.Customer">
+		<constructor-arg value="101" />
+		<constructor-arg value="Amit" />
+		<constructor-arg value="746736" />
+		<constructor-arg ref="address1" />
+
+	</bean>
+
+</beans>
